@@ -8,7 +8,7 @@ metadata:
   namespace: default
 spec:
   containers:
-  - image: us-central1-docker.pkg.dev/sqsh-developer-pocs/superset-repo/superset-v2
+  - image: us-central1-docker.pkg.dev/sqsh-developer-pocs/superset-repo/superset-v2:$COMMIT_SHA
     name: superset-pod
     ports:
     - containerPort: 80
