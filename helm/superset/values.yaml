@@ -184,7 +184,7 @@ configMountPath: "/app/pythonpath"
 extraConfigMountPath: "/app/configs"
 
 image:
-  repository: us-central1-docker.pkg.dev/elastic-pocs/superset-test/test-superset-2:v2
+  repository: us-central1-docker.pkg.dev/sqsh-developer-pocs/superset-repo/superset-v2
   tag: ""
   pullPolicy: IfNotPresent
 
