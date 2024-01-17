@@ -5,12 +5,12 @@ steps:
     args:
       - build
       - '-t'
-      - '$_ARTIFACTS_DIR/$PROJECT_ID/$_REPO_NAME/$_IMAGE_NAME:$COMMIT_SHA'
+      - '$_ARTIFACTS_DIR/$PROJECT_ID/$_REPO_NAME/$_IMAGE_NAME:latest'
       - .
   - name: gcr.io/cloud-builders/docker
     args:
       - push
-      - '$_ARTIFACTS_DIR/$PROJECT_ID/$_REPO_NAME/$_IMAGE_NAME:$COMMIT_SHA'
+      - '$_ARTIFACTS_DIR/$PROJECT_ID/$_REPO_NAME/$_IMAGE_NAME:latest'
     # deploy container image to GKE
   - name: "gcr.io/cloud-builders/gke-deploy"
     args:
