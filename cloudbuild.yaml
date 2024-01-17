@@ -11,3 +11,10 @@ steps:
     args:
       - push
       - '$_ARTIFACTS_DIR/$PROJECT_ID/$_REPO_NAME/$_IMAGE_NAME:$COMMIT_SHA'
+    # deploy container image to GKE
+  - name: "gcr.io/cloud-builders/gke-deploy"
+    args:
+    - run
+    - --filename=deployment-svc.yaml
+    - --location=us-central1-a
+    - --cluster=superset-cluster
